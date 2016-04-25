@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade" client="site">
+    <!--// TODO ADD LANGUAGE STRING -> PLG_CONTENT_PLUGINNAME-->
+    <name>PLG_CONTENT_PLUGINNAME</name>
+    <author>Samvel Antanyan</author>
+    <creationDate>25.04.2016</creationDate>
+    <copyright>Creative Solutions LLC 2011-2016 All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <authorEmail>samvel@creative-solutions.net</authorEmail>
+    <authorUrl>www.creative-solutions.net</authorUrl>
+    <version>1.0.0</version>
+    <!--// TODO ADD LANGUAGE STRING -> PLG_CONTENT_PLUGINNAME_DESCRIPTION-->
+    <description>PLG_CONTENT_PLUGINNAME_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="pluginname">pluginname.php</filename>
+        <filename>index.html</filename>
+        <folder>helper</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB.plg_content_pluginname.ini</language><!--available in plugin part of admin panel only-->
+        <language tag="en-GB">language/en-GB.plg_content_pluginname.sys.ini</language><!--available across all admin panel-->
+        <language tag="fr-FR">language/fr-FR.plg_content_pluginname.ini</language><!--available in plugin part of admin panel only-->
+        <language tag="fr-FR">language/fr-FR.plg_content_pluginname.sys.ini</language><!--available across all admin panel-->
+    </languages>
+    <!--config part adds some basic configuration that will be available in admin panel-->
+
+    <config>
+        <fields name="params" addfieldpath="administrator/components/com_content/models/fields">
+            <fieldset name="basic" label="basic">
+                <!--available filed types-> https://docs.joomla.org/Standard_form_field_types-->
+                <!--TODO Add PLG_CONTENT_PLUGINNAME_NEW_WINDOW, PLG_CONTENT_PLUGINNAME_NEW_WINDOW_DESCRIPTION-->
+                <field
+                    name="new_window"
+                    type="radio"
+                    default="1"
+                    class="btn-group btn-group-yesno"
+                    label="PLG_CONTENT_PLUGINNAME_NEW_WINDOW"
+                    description="PLG_CONTENT_PLUGINNAME_NEW_WINDOW_DESCRIPTION">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="general" label="general">
+                <field name="gago"
+                   type="radio"
+                   default="1"
+                   class="btn-group btn-group-yesno"
+                   label="PLG_CONTENT_PLUGINNAME_NEW_WINDOW"
+                   description="PLG_CONTENT_PLUGINNAME_NEW_WINDOW_DESCRIPTION">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
